@@ -237,7 +237,7 @@ let main = {
 
     methods: {
         gamesetup: function() {
-            $('.gamecell').attr('chess', 'null');
+            $('.chessboard-cel').attr('chess', 'null');
             for (let gamepiece in main.variables.pieces) {
                 $('#' + main.variables.pieces[gamepiece].position).html(main.variables.pieces[gamepiece].img);
                 $('#' + main.variables.pieces[gamepiece].position).attr('chess', gamepiece);
@@ -714,7 +714,7 @@ let main = {
 $(document).ready(function() {
     main.methods.gamesetup();
 
-    $('.gamecell').click(function(e) {
+    $('.chessboard-cel').click(function(e) {
 
         var selectedpiece = {
             name: '',

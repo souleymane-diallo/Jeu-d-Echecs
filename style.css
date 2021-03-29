@@ -1,32 +1,18 @@
-html,
-body {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-}
-
-div * {
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-#turn {
-    max-width: 451px;
-    max-height: 30px;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    float: right;
-    border-radius: 5px;
-    border: 1px solid rgb(0, 0, 0);
-    border-style: inset;
-    text-align: center;
-    padding: 5px 0 0 0;
-    background: #fff;
-    transition: .85s linear;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(#312E2B, white);
 }
 
 .turnhighlight {
@@ -34,51 +20,37 @@ div * {
     color: #fff;
 }
 
-#game {
-    max-width: 504px;
-    max-height: 504px;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    margin: 20px auto;
-}
-
-.cellprefix {
-    width: 100%;
-    height: 100%;
-    max-width: 50px;
-    max-height: 50px;
-    float: left;
-    margin: 3px;
-    padding: 15px 0 0 20px;
-}
-
-.gamecell {
-    border: 1px solid #000;
-    width: 100%;
-    height: 100%;
-    max-width: 50px;
-    max-height: 50px;
-    float: left;
-    margin: 3px;
-    transition: all 0.5s ease-in-out;
+.chessboard {
+    display: flex;
+    flex-wrap: wrap;
+    width: 518px;
+    height: 518px;
     border-radius: 5px;
-    font-size: 30pt;
-    padding: 0 0 0 6px;
-    cursor: pointer;
-    z-index: 1;
+    border: 3px solid #CCC;
 }
 
-.gamecell:hover {
+.chessboard-cel {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chessboard-cel .chessboard-cel:hover {
     color: #fff;
     background: rgba(37, 88, 228, 0.712);
     z-index: 2;
-    /* transform: translate(10px, -10px); */
-    /* animation: neonBlueText 1.5s ease-in-out infinite alternate; */
 }
 
 .grey {
-    background: rgba(128, 128, 128, 0.801);
+    background: #779556;
+}
+
+.white {
+    background: #EBECD0;
 }
 
 .green {
